@@ -1,0 +1,142 @@
+/* ******************************
+    Basic styling (ignore me!)
+****************************** */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #333;
+}
+.header {
+  max-width: 50%;
+  margin: 20px auto;
+  text-align: center;
+
+  h1 {
+    color: #fff;
+  }
+}
+
+/* ******************************
+         SweetAlert
+****************************** */
+.sweetalert {
+  h2 {
+    font-size: 1.6rem;
+  }
+  .text-muted {
+    margin: 18px 0 10px;
+  }
+}
+
+/* ============================
+            Error
+============================= */
+.error {
+  position: relative !important;
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 20px;
+  color: red;
+  border: 1px solid red;
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
+/* ============================
+ Loader (Spinner) with pure CSS
+============================= */
+
+.loader {
+  position: fixed;
+  z-index: 9;
+  top: 80px !important;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /*   position: relative; */
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.loader::before {
+  background: hsla(0, 0%, 22%, 0.7);
+}
+
+.loader::after {
+  content: "";
+  font-size: 48px;
+  width: 1em;
+  height: 1em;
+  border: 2px solid #ccc;
+  border-top-color: #ea4c89;
+  border-radius: 50%;
+  animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/* ******************************
+     react-masonry-css
+****************************** */
+// .masonry-grid {
+//   display: -webkit-box; /* Not needed if autoprefixing */
+//   display: -ms-flexbox; /* Not needed if autoprefixing */
+//   display: flex;
+//   margin-left: -30px; /* gutter size offset */
+//   width: auto;
+// }
+// .masonry-grid_column {
+//   padding-left: 0; /* gutter size */
+//   background-clip: padding-box;
+// }
+
+// // Style your items
+// .masonry-grid_column > div {
+//   /* change div to reference your elements you put in <Masonry> */
+//   background: grey;
+//   margin-bottom: 0;
+
+//   img {
+//     width: 100%;
+//     display: block;
+//   }
+// }
+
+/* ******************************
+     react-masonry-component
+****************************** */
+ul.masonry {
+  list-style-type: none;
+
+  li.masonry_item {
+    width: 100%;
+
+    @media (min-width: 667px) {
+      width: 50%;
+    }
+
+    @media (min-width: 860px) {
+      width: 33%;
+    }
+
+    img.masonry_item_img {
+      width: 100%;
+      display: block;
+    }
+  }
+}
