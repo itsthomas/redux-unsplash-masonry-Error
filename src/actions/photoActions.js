@@ -26,7 +26,8 @@ export const pageFetchDataSuccess = photos => dispatch => {
 
 // 4th action-creator
 export const fetchPhotos = term => async dispatch => {
-  const API_KEY = process.env.REACT_APP_UNSPLASH_API_KEY;
+  const API_KEY =
+    "e2e272fe09ea1a459070a2bd7d1d3529b96d82e60642821eedd27ff656a648e7";
   // dispatch for loader to show
   dispatch(pageIsLoading(true));
 
